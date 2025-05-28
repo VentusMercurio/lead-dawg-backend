@@ -1,0 +1,11 @@
+# Ignore environment and Python artifacts
+venv/
+__pycache__/
+*.pyc
+.env
+
+# Allow everything else
+!app.py
+!requirements.txt
+!render.yaml
+!.gitignore
