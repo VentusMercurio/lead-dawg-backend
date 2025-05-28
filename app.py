@@ -11,7 +11,7 @@ load_dotenv()
 app = Flask(__name__)
 from flask_cors import CORS
 
-CORS(app, resources={r"/*": {"origins": "https://lead-dawg-frontend.vercel.app"}})
+CORS(app)
 
 
 GOOGLE_PLACES_API_KEY = os.getenv("GOOGLE_PLACES_API_KEY")
