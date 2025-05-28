@@ -9,7 +9,10 @@ import time # Import the time module for delays
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)
+from flask_cors import CORS
+
+CORS(app, resources={r"/*": {"origins": "https://lead-dawg-frontend.vercel.app"}})
+
 
 GOOGLE_PLACES_API_KEY = os.getenv("GOOGLE_PLACES_API_KEY")
 PLACES_API_URL = "https://maps.googleapis.com/maps/api/place/textsearch/json"
